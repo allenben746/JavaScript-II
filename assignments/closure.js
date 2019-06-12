@@ -2,8 +2,7 @@
 // Write a simple closure of your own creation.  Keep it simple!
 const hello = "Hi";
 function giveGreeting () {
-  return hello; 
-  console.log(hello);
+  return hello;
 }
 giveGreeting();
 
