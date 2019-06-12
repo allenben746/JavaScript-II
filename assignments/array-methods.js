@@ -99,3 +99,77 @@ console.log(getEmails);
 let vipDonors = runners.filter(runner => runner.donation >= 200);
 console.log("VIP Donors")
 console.log(vipDonors);
+
+
+//Practice//
+
+array = [1,2,3,4,5,6,7,8,9,10]
+
+
+//Adds all of the array's values
+let arraysTotalSum = array.reduce((acc, item) => acc += item , 0)
+
+console.log("The total sum of the array --> ", arraysTotalSum); // 55
+
+//Finds the average value in the array
+let arraysAverageValue = array.reduce((acc, item) => acc += item / array.length, 0);
+
+console.log("The average value is --> ", arraysAverageValue); //5.5
+
+//Using arraysTotalSum for less code
+let arraysAverageValueEZ = arraysTotalSum / array.length;
+
+console.log("The average value is (EZ) --> ", arraysAverageValueEZ);
+
+
+order5571 = [ //Shopping Cart, All prices in USD
+    {item:1, weightOZ:4.5, SKU:567546732413, UPC:325435435, itemDesc:"Mike's Tough Tape", price: 14.99},
+    {item:2, weightOZ:25.7, SKU:432565464325, UPC:23453245243, itemDesc:"Garlic Press", price: 13.89},
+    {item:3, weightOZ:1.3, SKU:62546423524353, UPC:3254354543, itemDesc:"Rite Aid BandAid's", price: 5.99},
+    {item:4, weightOZ:32, SKU:37298374239874, UPC:321432543543, itemDesc:"Coffee Grounds 2lb", price: 19.99},
+    {item:5, weightOZ:65, SKU:4320574398257942, UPC:32454352435, itemDesc:"Paper, Legal", price: 18.99},
+    {item:6, weightOZ:4.9, SKU:22579900000, UPC:3425434325435, itemDesc:"Canon MSG300 Toner", price: 76.99},
+    {item:7, weightOZ:3.7, SKU:22559900000, UPC:23452345435243, itemDesc:"Canon MSG300 Ink, Color", price: 89.99},
+    {item:8, weightOZ:2.3, SKU:43254352431, UPC:52425345234532, itemDesc:"Pillow Case 12x14x2", price: 26.98},
+    {item:9, weightOZ:0.8, SKU:23475923452345, UPC:243524354235, itemDesc:"iPhoneX Phone Case, Black ", price: 22.99},
+    {item:10, weightOZ:1.1, SKU:24643543255624, UPC:24354325423, itemDesc:"Cigar Matches 20cnt", price: 2.99},
+    {item:11, weightOZ:87, SKU:23465436265435, UPC:23452435234, itemDesc:"B&B Scented Candle 12pk", price: 45.00},
+    {item:12, weightOZ:1.5, SKU:765656243545, UPC:4325435432543, itemDesc:"USB Cord, Blue, 1ft", price: 12.99},
+    {item:13, weightOZ:46.2, SKU:6254642645625, UPC:436546346243, itemDesc:"Wine Glass Set 9cnt", price: 64.57},
+    {item:14, weightOZ:1.9, SKU:563763464656, UPC:243654234235, itemDesc:"HDMI 2pk, 8ft", price: 9.99},
+    {item:15, weightOZ:2.2, SKU:46234364664, UPC:243562435435, itemDesc:"Edison Bulb, 24 volt", price: 24.87},
+    {item:16, weightOZ:1.9, SKU:546354325345, UPC:4325435243543, itemDesc:"VGA Cable", price: 8.00},
+    {item:17, weightOZ:0.9, SKU:867536546525, UPC:43254352345, itemDesc:"Fossil Leather Wallet, Classic", price: 34.87},
+    {item:18, weightOZ:1.1, SKU:57364636256, UPC:523452435243, itemDesc:"Apple Air Pods", price: 189.00},
+    {item:19, weightOZ:92.3, SKU:6463626542536, UPC:324543534, itemDesc:"Anthroplogie Jacket, Red Velvet", price: 89.67},
+    {item:20, weightOZ:71.4, SKU:635656366432, UPC:2354325345, itemDesc:"Throw Blanket", price: 56.64},
+    {item:21, weightOZ:56.2, SKU:653765466675, UPC:23452435435, itemDesc:"Cheese Cutting Set", price: 21.99},
+    {item:22, weightOZ:0.6, SKU:12865455733, UPC:4325436534532, itemDesc:"Blue Light Filter Glasses", price: 14.99},
+]
+
+//Create a function that will add an item to the shopping cart
+function addItem (orderNum, weightOZNum, SKUNum, UPCNum, itemDescValue, priceNum) {
+        let itemNum = orderNum.length + 1;
+        orderNum.push({item:itemNum, weightOZ: weightOZNum, SKU:SKUNum, UPC:UPCNum, itemDesc:itemDescValue, price:priceNum});
+        console.log(orderNum);
+}
+addItem(order5571, 3.4, 35566654663546, 43254354235, "Wool Socks", 13.99);
+addItem(order5571, 5,6, 4563546365646, 463656435254, "Golf Balls 8pk", 8.87);
+addItem(order5571, 1.4, 4365643563546, 2564352435234, "8x8 Picture Frame", 13.99);
+addItem(order5571, 0.3, 432564543656, 23454325235, "Swiss Army Knife", 33.99);
+//Find the the total weight, in ounces, of Order 5571
+
+
+//The company is offering 25% off shipping for orders over $150
+//Find the total cost of the order and apply, if needed, the discount
+
+
+//Item with a UPC of 243562435435 has just beem recalled. Create a function to remove this item.
+
+
+//The Company needs you to find the AIP (average item price), for marketing reasons. Create a
+//function for this.
+
+
+//The shipping charge is $0.32 / oz. Create a function to calculate the total shipping cost for this cart.
+
