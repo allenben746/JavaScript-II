@@ -1,4 +1,6 @@
-// Create a higher order function and invoke the callback function to test your work. You have been provided an example of a problem and a solution to see how this works with our items array.  Study both the problem and the solution to figure out the rest of the problems.
+// Create a higher order function and invoke the callback function to test your work.
+// You have been provided an example of a problem and a solution to see how this works with our items 
+// array.  Study both the problem and the solution to figure out the rest of the problems.
 
 const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 
@@ -23,31 +25,60 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
   });
 
 */
-
+///////////////////////////////////////////////////////////////////////////
+let theLength = (array) => array.length;
 
 function getLength(arr, cb) {
-  // getLength passes the length of the array into the callback.
+  return (cb(arr));
 }
+
+console.log("Length of array is --> ", getLength(items, theLength));
+
+////////////////////////////////////////////////////////////////////////////
+let theLast = (array) => array[array.length -1];
 
 function last(arr, cb) {
-  // last passes the last item of the array into the callback.
+  return (cb(arr));
 }
 
-function sumNums(x, y, cb) {
-  // sumNums adds two numbers (x, y) and passes the result to the callback.
-}
+console.log("Last item of array --> ", last(items, theLast));
 
-function multiplyNums(x, y, cb) {
-  // multiplyNums multiplies two numbers and passes the result to the callback.
-}
+////////////////////////////////////////////////////////////////////////////
+let add = (num1, num2) => num1 + num2;
 
-function contains(item, list, cb) {
+function operation(num1, num2, callback){
+  return (callback(num1, num2));
+}
+console.log("The sum is -->")
+console.log(operation(1, 2, add))
+
+////////////////////////////////////////////////////////////////////////////
+let multiply = (num1, num2) => num1 * num2
+
+function multiplyNums(num1, num2, callback) {
+  return (callback(num1, num2));
+}
+console.log("The product is -->");
+console.log(multiplyNums(6, 16, multiply));
+
+////////////////////////////////////////////////////////////////////////////
+
+let itemChecker = (array, item) => array.includes(item);
+
+function contains(array, item, cb) {
+  return cb(array, item);
+
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
 }
+console.log(contains(items, "Gum", itemChecker))
+
+
+
+
 
 /* STRETCH PROBLEM */
-
+////////////////////////////////////////////////////////////////////////////
 function removeDuplicates(array, cb) {
   // removeDuplicates removes all duplicate values from the given array.
   // Pass the duplicate free array to the callback function.
